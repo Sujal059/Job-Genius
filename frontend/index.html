@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JOB Genius — your AI copilot for job matching, interview prep, skill gap roadmaps, and skill assessment." />
+    <title>JOB Genius — AI Career Copilot</title>
+    <link rel="icon" type="image/svg+xml" href="/job-genius-logo.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--
+      Applies the saved theme (dark/light) before React mounts, so there's
+      no flash of the wrong theme on load. Kept intentionally tiny.
+    -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("job-genius-theme");
+          if (saved === "light" || saved === "dark") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {
+          /* localStorage unavailable — default theme applies */
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
